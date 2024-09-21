@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
 export class AppComponent {
   title = 'net-return-simulator';
 
@@ -26,35 +27,42 @@ export class AppComponent {
   showResult = false;
   resultMessage = '';
 
-  onSubmit(form: any) {
+  onSubmit() {
     console.log(this.formData);
+
+    /* Compute results */
 
     const fees = [0.3, 0.25, 0.2];
 
-    const MNIs = fees.map(fee => Math.round(
-      this.formData.monthlyRent * (1 - fee)
-    ));
+    const MNIs = fees.map(fee =>
+      this.formData.monthlyRent * (1 - fee) - this.formData.annualRentalFee / 12
+      // NOTE: I am factoring in the annual rental fee as a monthly expense for monthly estimates, yet assuming this is a yearly payment.
+    );
 
-    const ROIs = MNIs.map(MNI => Math.round(
-      100 * 12 * MNI / this.formData.purchasePrice
-    ));
+    const ROIs = MNIs.map(MNI => 
+      12 * MNI / this.formData.purchasePrice
+    );
 
-    let resultMessage = '';
+
+    /* Build result message */
+
+    let resultMessageBuilder = '';
     
     for (let year = 1; year <= fees.length; year++) {
-      resultMessage += `
+      resultMessageBuilder += `
         <b>YEAR ${year}</b>
         &nbsp;&nbsp;
     
-        MNI: ${MNIs[year - 1]}
+        MNI: €${Math.round(MNIs[year - 1])}
         &nbsp;&nbsp;
-        ROI: ${ROIs[year - 1]}%
+        ROI: ${Math.round(ROIs[year - 1] * 100)}%
     
         <br>
       `;
     }
     
-    this.resultMessage = resultMessage;
+    this.resultMessage = resultMessageBuilder;
     this.showResult = true;
+
   }
 }
