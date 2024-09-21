@@ -7,23 +7,23 @@
     <div id="form-container">
       <form #form="ngForm" (ngSubmit)="onSubmit(form)" id="form">
 
-        <div id="purchase-price">
+        <div id="purchase-price-div">
           <label for="purchasePrice">Purchase Price of the Property (€)</label>
-          <input type="text" id="purchasePrice" name="purchasePrice" required placeholder="300.000" ngModel>
+          <input type="text" id="purchasePrice" name="purchasePrice" required placeholder="300.000" [(ngModel)]="formData.purchasePrice">
         </div>
 
         <hr />
 
-        <div id="montly-rent">
+        <div id="montly-rent-div">
           <label for="monthlyRent">Monthly Rent Amount (€)</label>
-          <input type="text" id="monthlyRent" name="monthlyRent" required placeholder="1.500" ngModel>
+          <input type="text" id="monthlyRent" name="monthlyRent" required placeholder="1.500" [(ngModel)]="formData.monthlyRent">
         </div>
 
         <hr />
 
-        <div id="rental-fee">
+        <div id="rental-fee-div">
           <label for="annualRentalFee">Annual Rental Fee (€)</label>
-            <input type="text" id="annualRentalFee" name="annualRentalFee" required placeholder="18.000" ngModel>
+            <input type="text" id="annualRentalFee" name="annualRentalFee" required placeholder="18.000" [(ngModel)]="formData.annualRentalFee">
         </div>
 
         <hr />
@@ -32,8 +32,8 @@
       </form>
     </div>
 
-    <div id="result-container">
-      <div id="result">You're rich!</div>
+    <div id="result-container" *ngIf="showResult">
+      <div id="result" [innerHTML]="resultMessage"></div>
     </div> 
 
 </main>

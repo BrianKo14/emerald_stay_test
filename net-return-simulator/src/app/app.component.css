@@ -65,13 +65,12 @@
 }
 
 #result-container {
-	height: 30px;
+	height: 100%;
 	width: 400px;
 	transform: translate(calc(50vw - 50%), 30vh);
 	padding: 20px;
 	border-radius: 5px;
 	border: 1px solid #00a062;
-	display: none;
 }
 
 #result {
