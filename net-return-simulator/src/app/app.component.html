@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="https://use.typekit.net/ftb5nar.css">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+
+<main class="main">
+    <img src="logo.svg" alt="logo" class="logo" />
+
+    <div id="form-container">
+      <form #form="ngForm" (ngSubmit)="onSubmit(form)" id="form">
+
+        <div id="purchase-price">
+          <label for="purchasePrice">Purchase Price of the Property (€)</label>
+          <input type="text" id="purchasePrice" name="purchasePrice" required placeholder="300.000" ngModel>
+        </div>
+
+        <hr />
+
+        <div id="montly-rent">
+          <label for="monthlyRent">Monthly Rent Amount (€)</label>
+          <input type="text" id="monthlyRent" name="monthlyRent" required placeholder="1.500" ngModel>
+        </div>
+
+        <hr />
+
+        <div id="rental-fee">
+          <label for="annualRentalFee">Annual Rental Fee (€)</label>
+            <input type="text" id="annualRentalFee" name="annualRentalFee" required placeholder="18.000" ngModel>
+        </div>
+
+        <hr />
+
+        <button type="submit" [disabled]="!form.valid">Calculate Net Income</button>
+      </form>
+    </div>
+
+    <div id="result-container">
+      <div id="result">You're rich!</div>
+    </div> 
+
+</main>
+
+<router-outlet />

@@ -1,0 +1,82 @@
+
+.logo {
+	position: absolute;
+	width: 900px;
+	left: 50%;
+	transform: translate(-50%, 50%);
+}
+
+#form-container {
+	height: 100%;
+	width: 500px;
+	transform: translate(calc(50vw - 50%), 25vh);
+}
+
+#form {
+	background: #ffffff4c;
+	padding: 20px;
+	border-radius: 5px;
+	border: 1px solid #fff;
+	gap: 10px;
+}
+
+#form div {
+	margin-top: 20px;
+
+	font-family: "acumin-pro", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+#form hr {
+	border: 0.5px solid #fff;
+}
+
+#form div label {
+	padding-left: 10px;
+	display: block;
+	margin-bottom: 5px;	
+	font-size: 14px;
+	color: #212529;
+}
+
+#form div input {
+	width: 100%;
+	padding: 8px;
+	box-sizing: border-box;
+	background-color: transparent;
+	border: 0;
+	outline: none;
+	font-size: 16px;
+}
+
+#form button {
+	margin-top: 30px;
+	width: 100%;
+	padding: 10px;
+	background-color: #00a062;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-family: "Gowun Batang", serif;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+#result-container {
+	height: 30px;
+	width: 400px;
+	transform: translate(calc(50vw - 50%), 30vh);
+	padding: 20px;
+	border-radius: 5px;
+	border: 1px solid #00a062;
+	display: none;
+}
+
+#result {
+	font-family: "Gowun Batang", serif;
+	color: #00a062;
+	text-transform: uppercase;
+	text-align: center;
+}
