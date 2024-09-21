@@ -75,7 +75,7 @@ h1 {
 
 #result-container {
     height: 100%;
-    width: 500px;
+    width: 400px;
     transform: translate(calc(50vw - 50%), 30vh);
     padding: 20px;
     border-radius: 5px;
