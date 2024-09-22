@@ -11,21 +11,21 @@
 
         <div id="purchase-price-div">
           <label for="purchasePrice">Purchase Price of the Property (€)</label>
-          <input type="text" id="purchasePrice" name="purchasePrice" required placeholder="300.000" [(ngModel)]="formData.purchasePrice">
+          <input type="text" (input)="validateNumberInput($event)" id="purchasePrice" name="purchasePrice" required placeholder="300.000" [(ngModel)]="formData.purchasePrice">
         </div>
 
         <hr />
 
         <div id="montly-rent-div">
           <label for="monthlyRent">Monthly Rent Amount (€)</label>
-          <input type="text" id="monthlyRent" name="monthlyRent" required placeholder="1.500" [(ngModel)]="formData.monthlyRent">
+          <input type="text" (input)="validateNumberInput($event)" id="monthlyRent" name="monthlyRent" required placeholder="1.500" [(ngModel)]="formData.monthlyRent">
         </div>
 
         <hr />
 
         <div id="rental-fee-div">
           <label for="annualRentalFee">Annual Rental Fee (€)</label>
-            <input type="text" id="annualRentalFee" name="annualRentalFee" required placeholder="18.000" [(ngModel)]="formData.annualRentalFee">
+            <input type="text" (input)="validateNumberInput($event)" id="annualRentalFee" name="annualRentalFee" required placeholder="18.000" [(ngModel)]="formData.annualRentalFee">
         </div>
 
         <hr />

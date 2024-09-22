@@ -65,4 +65,8 @@ export class AppComponent {
     this.showResult = true;
 
   }
+
+  validateNumberInput(event: any): void {
+    event.target.value = event.target.value.replace(/[^0-9]/g, '');
+  }
 }
