@@ -17,7 +17,7 @@ Check it out live <a href="https://brianko14.github.io/emerald_stay_test/">right
 
 $$\text{Monthly Net Income (MNI)} = \text{Monthly Rent} \times (1 - \text{Agency Fee}) - \frac{\text{Annual Rental Fee}}{12}$$
 
-$$\text{Return on Investment (RO}I_i) = \frac{\text{MNI} \times 12}{\text{Purchase Price}} - \text{ROI}_{i-1}$$
+$$\text{Return on Investment (RO}I_i) = \frac{\text{MNI} \times 12}{\text{Purchase Price}} + \text{ROI}_{i-1}$$
 
 <br />
 
