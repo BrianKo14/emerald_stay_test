@@ -10,3 +10,15 @@ Check it out live <a href="https://brianko14.github.io/emerald_stay_test/">right
 <br />
 
 <img src="https://i.imgur.com/C6knt4P.png" href="https://brianko14.github.io/emerald_stay_test/" height="300">
+
+<br />
+
+### Interpretation of formulas
+
+$$\text{Monthly Net Income (MNI)} = \text{Monthly Rent} \times (1 - \text{Agency Fee}) - \frac{\text{Annual Rental Fee}}{12}$$
+
+$$\text{Return on Investment (ROI)} = \frac{\text{MNI} \times 12}{\text{Purchase Price}}$$
+
+<br />
+
+**Implementation decision:** I am factoring in the annual rental fee as a monthly expense for monthly estimates, yet assuming this is a yearly payment.
