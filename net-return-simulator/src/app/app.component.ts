@@ -39,10 +39,11 @@ export class AppComponent {
       // NOTE: I am factoring in the annual rental fee as a monthly expense for monthly estimates, yet assuming this is a yearly payment.
     );
 
-    const ROIs = MNIs.map(MNI => 
-      12 * MNI / this.formData.purchasePrice
-    );
-
+    let totalROI = 0;
+    const ROIs = MNIs.map(MNI => { 
+      totalROI += 12 * MNI / this.formData.purchasePrice;
+      return totalROI;
+    });
 
     /* Build result message */
 
